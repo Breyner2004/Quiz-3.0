@@ -16,7 +16,7 @@
   
           <div> 
              <!--Traer el componente de los botones de la crud  -->
-             <CrudButtonComponentProducto @findAllRecords="findAllRecords" @updateRecord="updateRecord" @deleteRecordPhysical="deleteRecordPhysical" @deleteRecordLogical="deleteRecordLogical"/>
+             <CrudButtonComponent @findAllRecords="findAllRecords" @createRecord="createRecord" @updateRecord="updateRecord" @deleteRecordPhysical="deleteRecordPhysical" @deleteRecordLogical="deleteRecordLogical"/>
           </div>         
         </div>
       </ion-content>
@@ -26,7 +26,7 @@
   <script setup lang="ts">
   import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
   import InputComponent from '@/components/InputComponent.vue';
-  import CrudButtonComponentProducto from '@/components/CrudButtonComponentProducto.vue';
+  import CrudButtonComponent from '@/components/CrudButtonComponent.vue';
   import axios from 'axios';
 // Rutas de la API
 const baseURL = 'http://localhost:8080/shopping_car/api/producto';
@@ -54,7 +54,7 @@ async function fetchRecordById(id) {
   }
 }
 
-Crear registro
+//Crear registro
 async function createRecord() {
   const data = {
     codigo: codigo.value,

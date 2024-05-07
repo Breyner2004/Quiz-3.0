@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProveedorService  extends IProveedorService {
+public class ProveedorService  implements IProveedorService {
     //Conectar con los datos - IRepository
     // Inyección de dependencia
     @Autowired

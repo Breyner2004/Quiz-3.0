@@ -12,6 +12,8 @@
         <strong><a href="/cliente">Ir a Clientes</a></strong>
         <br>
         <strong><a href="/producto">Ir a productos</a></strong>
+        <br>
+        <strong><a href="/proveedor">Ir a proveedor</a></strong>
 
       </div>
 

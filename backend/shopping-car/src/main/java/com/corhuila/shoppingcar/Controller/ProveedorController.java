@@ -1,4 +1,5 @@
 package com.corhuila.shoppingcar.Controller;
+
 import com.corhuila.shoppingcar.Document.Proveedor;
 import com.corhuila.shoppingcar.IService.IProveedorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,19 +32,17 @@ public class ProveedorController {
         return service.save(proveedor);
     }
 
+
     @PutMapping("/{id}")
     public void update(@RequestBody Proveedor proveedor, @PathVariable String id) {
         service.update(proveedor, id);
     }
-
-    @PutMapping("delete-logical/{id}")
-    public void deleteLogical(@RequestBody Proveedor proveedor, @PathVariable String id) {
-        service.update(proveedor, id);
+    @PutMapping("/delete-logical/{id}")
+    public void deleteLogical(@PathVariable String id) {
+        service.deleteLogical(id);
     }
-
     @DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         service.delete(id);
     }
-
 }
